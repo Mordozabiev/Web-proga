@@ -1,0 +1,83 @@
+* {
+    background-color: rgb(25, 25, 25);
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.mian-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.animation-text {
+    height: 150px;
+}
+
+h1 {
+    color: aliceblue;
+    padding: 0 100px 100px;
+}
+
+h1:hover {
+    color: red;
+    font-size: 50pt;
+    font-weight: 700;
+    text-shadow: 4px rgba(0, 0, 0, 0.3);
+    transition: color 1s;
+    transition: font-size 1s;
+
+}
+
+.nm {
+    opacity: 0;
+    font-size: 20pt;
+    margin: 100px;
+    color: red;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+.nm:hover {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.nm:active {
+    color: blue;
+}
+
+.tablitsya {
+    display: grid;
+    grid-template-columns: 100px 200px 100px;
+    grid-template-rows: 100px 200px 100px;
+    gap: 10px;
+}
+
+.yacheyku-1,
+.yacheyku-2,
+.yacheyku-3 {
+    border-radius: 5px;
+}
+
+.yacheyku-1 {
+    background: red;
+}
+
+.yacheyku-2 {
+    background: green;
+}
+
+.yacheyku-3 {
+    background: blue;
+}
+
+.yacheyku-1:active,
+.yacheyku-3:active {
+    background: rgb(83, 42, 69);
+}
+
+.yacheyku-2:hover {
+    background: rgb(94, 112, 51);
+}

@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.board {
+    display: flex;
+    align-items: flex-start;
+    gap: 250px;
+    padding: 50px;
+}
+
+.drag {
+    display: grid;
+    grid-template-columns: 140px;
+    grid-template-rows: repeat(3, 140px);
+    gap: 15px;
+    min-height: 450px;
+    width: 140px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.cont-drag {
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+    cursor: grab;
+    object-fit: cover;
+    display: block;
+}
+
+.cont-drag.dragging {
+    opacity: 0.4;
+}
+
+.drop {
+    display: grid;
+    grid-template-columns: repeat(7, 90px);
+    grid-auto-rows: 90px;
+    gap: 10px;
+
+    grid-template-areas:
+        "cont cont cont cont cont cont empty"
+        "empty empty empty empty empty cont empty"
+        "cont cont cont cont cont cont empty"
+        "cont empty empty empty empty empty empty"
+        "cont cont cont cont cont cont cont";
+}
+
+.cont {
+    position: relative;
+    background-color: green;
+    border-radius: 8px;
+}
+
+.penalty {
+    background-color: #00a39b;
+}
+
+.empty {
+    background-color: #d4d4d4;
+    border-radius: 8px;
+}
+
+.cont .cont-drag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+}
+
+.message {
+    min-height: 30px;
+    padding: 0 50px 10px;
+    font-size: 20px;
+    color: rgb(134, 3, 3);
+}
+
+.dice-box {
+    padding: 0 50px 30px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#roll {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+#dice-result {
+    font-size: 20px;
+    font-weight: bold;
+}

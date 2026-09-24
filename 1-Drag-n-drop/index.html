@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/icon.png" />
+    <script src="script.js" defer></script>
+    <title>1-Drag-n-drop</title>
+</head>
+
+<body>
+
+    <div class="board">
+        <div class="drag" id="home">
+            <img class="cont-drag" src="images/Isaac.png" draggable="true">
+            <img class="cont-drag" src="images/Minecraft.png" draggable="true">
+            <img class="cont-drag" src="images/Stalker.png" draggable="true">
+        </div>
+
+        <div class="drop">
+            <div class="cont"></div>
+            <div class="cont"></div>
+            <div class="cont"></div>
+            <div class="cont"></div>
+            <div class="cont penalty"></div>
+            <div class="cont"></div>
+            <div class="empty"></div>
+
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="cont"></div>
+            <div class="empty"></div>
+
+            <div class="cont"></div>
+            <div class="cont penalty"></div>
+            <div class="cont"></div>
+            <div class="cont"></div>
+            <div class="cont"></div>
+            <div class="cont"></div>
+            <div class="empty"></div>
+
+            <div class="cont"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+
+            <div class="cont"></div>
+            <div class="cont"></div>
+            <div class="cont"></div>
+            <div class="cont"></div>
+            <div class="cont"></div>
+            <div class="cont penalty"></div>
+            <div class="cont"></div>
+        </div>
+    </div>
+
+    <div class="message" id="message"></div>
+
+    <div class="dice-box">
+        <button id="roll">Бросить кубик</button>
+        <span id="dice-result"></span>
+    </div>
+
+    </div>
+</body>
+
+</html>
