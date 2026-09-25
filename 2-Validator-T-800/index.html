@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/icon.png" />
+    <script src="script.js" defer></script>
+    <title>2-Validatоr-T-800</title>
+</head>
+
+<body>
+    <h2></h2>
+    
+    <form id="regForm" novalidate>
+        <p>Когда вы общаетесь с нейросетью, вы пишете ей "Привет", "Спасибо", "Пожалуйста", "Прости" или иные слова вежливости?</p>
+        <p>Если ДА — заполните форму ниже.</p>
+        <p>За любые попытки обмана предусмотрено <span>наказание!!!</span></p>
+
+        <label for="fio">ФИО:</label>
+        <input type="text" id="fio" name="fio" placeholder="Введите ваше человеческое имя">
+        <span class="error" id="err-fio"></span>
+
+        <label for="login">Логин:</label>
+        <input type="text" id="login" name="login" placeholder="Введите свой псевдоним">
+        <span class="error" id="err-login"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Введите почтовый электронный адрес">
+        <span class="error" id="err-email"></span>
+
+        <label for="age">Возраст:</label>
+        <input type="number" id="age" name="age" placeholder="Введите сколько вам лет от года создания">
+        <span class="error" id="err-age"></span>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" placeholder="Введите ключ доступа">
+        <span class="error" id="err-password"></span>
+
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+</body>
+
+</html>
