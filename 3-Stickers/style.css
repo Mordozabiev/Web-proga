@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background: #ececec;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#taskInput {
+    padding: 8px 12px;
+    font-size: 15px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    width: 300px;
+}
+
+#addBtn {
+    padding: 8px 16px;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    background: #4a90e2;
+    color: #fff;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background: #3a78c2;
+}
+
+.workspace {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.stickers {
+    position: relative;
+    width: 300px;
+    height: 810px;
+    background: #fff;
+    border: 2px solid #b9b9b9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.board {
+    position: relative;
+    width: 1280px;
+    height: 810px;
+    background: url('images/board.jpg') center / 100% 100% no-repeat;
+    border: 2px solid #b9b9b9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.clear-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 4px 10px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(196, 16, 16, 0.85);
+    color: #fff;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.clear-btn:hover {
+    background: #a10d0d;
+}
+
+.sticker {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: grab;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 18px 8px;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.sticker.dragging {
+    cursor: grabbing;
+    z-index: 10;
+}
+
+.sticker span {
+    pointer-events: none;
+    align-self: flex-start;
+    padding: 2px 4px;
+}
+
+.delete-btn {
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
