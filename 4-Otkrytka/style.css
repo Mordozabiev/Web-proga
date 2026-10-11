@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background: #ececec;
+    color: #222;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.layout {
+    display: flex;
+    gap: 40px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    flex-shrink: 0;
+}
+
+input, select, button {
+    padding: 8px 12px;
+    font-size: 15px;
+    border: 1px solid #bbbbbb;
+    border-radius: 6px;
+}
+
+button {
+    background: #3fbd3f;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    background: #a7a7a7;
+    cursor: not-allowed;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.empty {
+    color: #777777;
+    font-style: italic;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.card p {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.card small {
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.card.spring {
+    background: linear-gradient(135deg, #e4ffc0, #9fddda);
+    color: #313131;
+}
+
+.card.retro {
+    background: #f5e6c8;
+    color: #6b4f2a;
+    border: 3px double #6b4f2a;
+}
+
+.card.light {
+    position: relative;
+    color: #333;
+    border: 3px solid #ffffff;;
+    background: url('images/light.jpg') center / cover no-repeat;
+    overflow: hidden;
+}
+
+.card.dark {
+    position: relative;
+    color: #ecf0f1;
+    border: 3px solid #2c3e50;
+    background: url('images/dark.jpg') center / cover no-repeat;
+    overflow: hidden;
+}
+
+.card.newyear {
+    position: relative;
+    color: #fff;
+    border: 3px solid #1e8449;
+    background: url('images/new_year.jpg') center / cover no-repeat;
+    overflow: hidden;
+}
+
+.card.newyear::before,
+.card.dark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+}
+
+.card.light::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(2px);
+}
+
+.card.newyear p,
+.card.newyear small,
+.card.dark p,
+.card.dark small,
+.card.light p,
+.card.light small {
+    position: relative;
+    z-index: 1;
+}
+
+.clear {
+    background-color: #a7a7a7;
+    transition: background-color 0.5s ease;
+    margin-bottom: 15px;
+}
+
+.clear:hover {
+    background-color: #bd1212;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Открытки</title>
+    <link rel="icon" href="images/icon.png" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="layout">
+        <div class="form-cont">
+            <h1>Создание открыток</h1>
+            <div class="form">
+                <input type="text" id="text" placeholder="текст">
+                <input type="text" id="from" placeholder="от кого">
+                <input type="text" id="to" placeholder="кому">
+
+                <select id="theme">
+                    <option value="light">Светлая</option>
+                    <option value="dark">Тёмная</option>
+                    <option value="newyear">Новогодняя</option>
+                    <option value="spring">Весенняя</option>
+                    <option value="retro">Ретро</option>
+                </select>
+
+                <button id="send" disabled>Отправить</button>
+            </div>
+        </div>
+
+        <div class="history-cont">
+            <h1>История открыток</h1>
+            <button id="clear" class="clear">Очистить всё</button>
+            <div class="history" id="history"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
