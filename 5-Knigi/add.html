@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/icon.png" />
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/components.js" defer></script>
+    <title>Knigi add</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="cont__center">
+            <h1 id="formTitle">Добавить книгу</h1>
+            <form id="addForm" novalidate>
+
+                <label for="title">Книга:</label>
+                <input type="text" id="title" name="title" placeholder="Название книги">
+                <span class="error" id="err-title"></span>
+
+                <label for="author">Автор:</label>
+                <input type="text" id="author" name="author" placeholder="ФИО автора книги">
+                <span class="error" id="err-author"></span>
+
+                <label for="genre">Жанр:</label>
+                <input type="text" id="genre" name="genre" placeholder="Жанр книги">
+                <span class="error" id="err-genre"></span>
+
+                <label for="count">Количество страниц:</label>
+                <input type="number" id="count" name="count" placeholder="Количество страниц в книге">
+                <span class="error" id="err-count"></span>
+
+                <label for="rcount">Прочитано страниц:</label>
+                <input type="number" id="rcount" name="rcount" placeholder="Прочитано страниц в книге">
+                <span class="error" id="err-rcount"></span>
+
+                <label for="date">Дата прочтения:</label>
+                <input type="date" id="date" name="date">
+                <span class="error" id="err-date"></span>
+
+                <label for="rating">Оценка по 10-бальной шкале:</label>
+                <input type="number" id="rating" name="rating" placeholder="Ваша оценка книги">
+                <span class="error" id="err-rating"></span>
+
+                <label for="note">Заметки/Цитаты:</label>
+                <textarea type="text" id="note" name="note" placeholder="Ваши заметки или цитаты из книги"
+                    rows="5"></textarea>
+                <span class="error" id="err-note"></span>
+
+                <label>Обложка:</label>
+                <div id="drop-zone" class="drop-zone">
+                    <span id="drop-text">Перетащите сюда фото</span>
+                    <button type="button" id="remove-cover" class="remove-cover" style="display: none;">&times;</button>
+                    <input type="file" id="cover-file" accept=".jpg, .jpeg, .png" style="display: none;">
+                </div>
+                <span class="error" id="err-cover"></span>
+
+                <div class="form-actions">
+                    <button type="submit" id="submit-btn">Добавить книгу</button>
+                    <button type="button" id="delete-btn" class="delete-btn" title="Удалить книгу"></button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
